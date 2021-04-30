@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Potta+One&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="prism.css">
+        <script src="prism.js"></script>
+        <link rel="stylesheet" href="style.css">
+    <title>Cheatsheet</title>
+</head>
+<body>
+    <nav>
+        <span class="logo"><img src="copy.png" alt=""></span>
+        <div class="content center">
+            All Programming Cheatsheet For You!
+        </div>
+    </nav>
+ <div id="clock"></div>
+   
+    <div class="container">
+        <ol>
+           <li><b>HTML Basic Code:</b>
+                <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+     &lt;meta charset="UTF-8"&gt;
+     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+     &lt;link href="style.css" rel="stylesheet" type="text/css"&gt;
+     &lt;link rel="icon" href="" size=""&gt;
+     &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</li> 
+<li>def function in python:
+<pre class="language-python"><code>def add():
+    a=int(input('enter first no'))
+    b=int(input('enter second no'))
+    return a+b
+sum=add()
+print(sum)</code>
+</pre>
+</li>
+
+<li>try & except in python:
+<pre class="language-python"><code>try:
+ a=int(input('enter your no'))
+except:
+    print('error')</code>
+</pre>
+</li>
+
+  <li>if,else,elif in python:
+<pre class="language-python"><code>a=int(input('enter your first no.'))
+b=int(input('enter your second no.'))
+if a>b:
+	print('a is greatest no.',a)
+elif a&lt;b:
+	print('b is grearest no.',b)
+else :
+	print('both equal')</code>
+</pre>
+</li>
+ 
+<li>for & while loop in python:
+<pre class="language-python"><code>#for loop
+  b=int(input('enter your no.'))
+for a in range (1,11):
+	print(a*b)
+#while loop
+a=1
+b=2
+while a<=10:
+	print(b,'*',a,'=',a*b)
+	a=a+1</code>
+</pre>
+</li>
+<li>class in python:
+<pre class="language-python"><code>class Kaushal:
+	def phone(self):
+		print('I am learning python')
+	def book(self):
+		print('I am reading book')
+k1=Kaushal()
+k1.phone()
+k1.book()</code>
+</pre>
+</li>
+<li>flask in python:
+<pre class="language-python"><code>#basic template
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
+aap.run(debug=True)
+</code></pre>
+</li>
+<li>flask in python:
+<pre class="language-python"><code>#using html template
+@app.route("/about")
+def Kaushal():
+    name = "rohan das"
+    return render_template('about.html', name2 = name)</code>
+</pre>
+</li>
+
+      </ol>
+    </div>
+<script type="text/javascript" charset="utf-8">
+function clock() {
+      let date = new Date();
+      let hrs = date.getHours();
+      let mins = date.getMinutes();
+      let secs = date.getSeconds();
+      let period = "AM";
+    
+      if (hrs == 0) hrs = 12;
+      if (hrs > 12) {
+        hrs = hrs - 12;
+        period = "PM";
+      }
+    
+      hrs = hrs < 10 ? `0${hrs}` : hrs;
+      mins = mins < 10 ? `0${mins}` : mins;
+      secs = secs < 10 ? `0${secs}` : secs;
+      let time = `${hrs}:${mins}:${secs} ${period}`;
+      setInterval(clock, 1000);
+      document.getElementById("clock").innerText = time;
+}
+    clock();
+</script>
+</body>
+</html>
